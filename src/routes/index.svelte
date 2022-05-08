@@ -47,9 +47,9 @@
 </div>
 
 <div class='text-center text-lg text-gray-500 fixed bottom-12 w-full'>
-	made by
+	<span class='select-none'>made by</span>
 	<a class='text-blue-500 underline underline-offset-8' href='https://github.com/dreamscached'>@dreamscached</a>
-	with
+	<span class='select-none'>with</span>
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
 		class='h-5 w-5 inline stroke-red-500 fill-red-500'

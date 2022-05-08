@@ -70,7 +70,7 @@
     }
 </script>
 
-<h1 class='text-3xl text-gray-600 text-center uppercase'>now draw!</h1>
+<h1 class='text-3xl text-gray-600 text-center uppercase select-none'>now draw!</h1>
 <div class='mt-[5vh] w-1/2 m-auto'>
     <div
             class='

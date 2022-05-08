@@ -12,7 +12,7 @@
     }
 </script>
 
-<h1 class='text-3xl text-gray-600 text-center uppercase'>pick brush</h1>
+<h1 class='text-3xl text-gray-600 text-center uppercase select-none'>pick brush</h1>
 <div class='mt-[5vh] w-1/2 m-auto'>
     <div class='mt-[10vh] w-1/2 m-auto'>
         <div class='grid grid-cols-2 place-items-center m-auto'>

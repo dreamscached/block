@@ -34,7 +34,7 @@
 	}
 </script>
 
-<h1 class='text-3xl text-gray-600 text-center uppercase'>pick grid size</h1>
+<h1 class='text-3xl text-gray-600 text-center uppercase select-none'>pick grid size</h1>
 <div class='mt-[5vh] w-1/2 m-auto'>
 	<div
 		class='grid gap-3'
