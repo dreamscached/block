@@ -1416,6 +1416,13 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
+svelte-adapter-github@^0.0.1-next.0:
+  version "0.0.1-next.0"
+  resolved "https://registry.yarnpkg.com/svelte-adapter-github/-/svelte-adapter-github-0.0.1-next.0.tgz#fc02fa0c4fc4c4f3a775198fee510c0a282c6721"
+  integrity sha512-oJDbB3+t/7mw+UQbV8PvgPN6S0ZaawHmF3q073IzW3VQh/ILLfWTtEFUXv0vZgaRQoN9uc3b0k1oY1F1CvN96A==
+  dependencies:
+    tiny-glob "0.2.9"
+
 svelte-check@^2.2.6:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-2.7.0.tgz#10d579dc89bf2e145a04786cc9fa8dabfb018a2a"
@@ -1484,7 +1491,7 @@ text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-tiny-glob@^0.2.9:
+tiny-glob@0.2.9, tiny-glob@^0.2.9:
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/tiny-glob/-/tiny-glob-0.2.9.tgz#2212d441ac17928033b110f8b3640683129d31e2"
   integrity sha512-g/55ssRPUjShh+xkfx9UPDXqhckHEsHr4Vd9zX55oSdGZc/MD0m3sferOkwWtp98bv+kcVfEHtRJgBVJzelrzg==
