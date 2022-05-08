@@ -71,42 +71,31 @@
 
 <h1 class='text-3xl text-gray-600 text-center uppercase select-none'>now draw!</h1>
 <div class='mt-[5vh] w-1/2 m-auto'>
-	<div
-		class='
-			grid
-			gap-3
-			justify-center justify-items-center
-		'
+	<div class='grid gap-3 justify-center justify-items-center'
 
-		class:grid-cols-1={width === 1}
-		class:grid-cols-2={width === 2}
-		class:grid-cols-3={width === 3}
-		class:grid-cols-4={width === 4}
-		class:grid-cols-5={width === 5}
-		class:grid-cols-6={width === 6}
-		class:grid-cols-7={width === 7}
-		class:grid-cols-8={width === 8}
-		class:grid-cols-9={width === 9}
+		 class:grid-cols-1={width === 1}
+		 class:grid-cols-2={width === 2}
+		 class:grid-cols-3={width === 3}
+		 class:grid-cols-4={width === 4}
+		 class:grid-cols-5={width === 5}
+		 class:grid-cols-6={width === 6}
+		 class:grid-cols-7={width === 7}
+		 class:grid-cols-8={width === 8}
+		 class:grid-cols-9={width === 9}
 
-		class:grid-rows-1={height === 1}
-		class:grid-rows-2={height === 2}
-		class:grid-rows-3={height === 3}
-		class:grid-rows-4={height === 4}
-		class:grid-rows-5={height === 5}
-		class:grid-rows-6={height === 6}
+		 class:grid-rows-1={height === 1}
+		 class:grid-rows-2={height === 2}
+		 class:grid-rows-3={height === 3}
+		 class:grid-rows-4={height === 4}
+		 class:grid-rows-5={height === 5}
+		 class:grid-rows-6={height === 6}
 
-		on:mouseout={clearCursor} on:blur={clearCursor}
+		 on:mouseout={clearCursor} on:blur={clearCursor}
 	>
 		{#each grid as row, y}
 			{#each row as cell, x}
 				<div
-					class='
-						border-2 border:gray-200
-						rounded-md
-						hover:cursor-pointer
-						transition transition-colors
-						p-4 w-1
-					'
+					class='border-2 border:gray-200 rounded-md hover:cursor-pointer transition transition-colors p-4 w-1'
 
 					class:bg-block-green={cell?.name === 'green'}
 					class:border-block-green={cell?.name === 'green'}
@@ -161,30 +150,22 @@
 	</div>
 </div>
 <div class='w-2/3 m-auto'>
-	<div
-		class='grid mt-[5vh] gap-x-3'
+	<div class='grid mt-[5vh] gap-x-3'
 
-		class:grid-cols-1={colors.length === 1}
-		class:grid-cols-2={colors.length === 2}
-		class:grid-cols-3={colors.length === 3}
-		class:grid-cols-4={colors.length === 4}
-		class:grid-cols-5={colors.length === 5}
-		class:grid-cols-6={colors.length === 6}
-		class:grid-cols-7={colors.length === 7}
-		class:grid-cols-8={colors.length === 8}
-		class:grid-cols-9={colors.length === 9}
-		class:grid-cols-10={colors.length === 10}
+		 class:grid-cols-1={colors.length === 1}
+		 class:grid-cols-2={colors.length === 2}
+		 class:grid-cols-3={colors.length === 3}
+		 class:grid-cols-4={colors.length === 4}
+		 class:grid-cols-5={colors.length === 5}
+		 class:grid-cols-6={colors.length === 6}
+		 class:grid-cols-7={colors.length === 7}
+		 class:grid-cols-8={colors.length === 8}
+		 class:grid-cols-9={colors.length === 9}
+		 class:grid-cols-10={colors.length === 10}
 	>
 		{#each colors as paletteColor}
 			<div
-				class='
-					border-2 rounded-md
-					transition
-					text-white
-					w-8 h-8
-
-					hover:cursor-pointer hover:-translate-y-1.5 hover:transition
-				'
+				class='border-2 rounded-md transition text-white w-8 h-8 hover:cursor-pointer hover:-translate-y-1.5 hover:transition'
 
 				class:bg-block-green={paletteColor?.name === 'green'}
 				class:border-block-green={paletteColor?.name === 'green'}
@@ -208,14 +189,17 @@
 				on:click={() => color = paletteColor}
 			>
 				{#if color?.name === paletteColor?.name}
-					<svg
-						xmlns='http://www.w3.org/2000/svg'
-						stroke='currentColor'
-						stroke-width='2'
-						class='w-5 h-5 m-1' fill='none' viewBox='0 0 24 24'
+					<svg xmlns='http://www.w3.org/2000/svg'
+						 stroke='currentColor'
+						 stroke-width='2'
+						 class='w-5 h-5 m-1'
+						 fill='none'
+						 viewBox='0 0 24 24'
 					>
-						<path stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7'
-							  class:stroke-black={color === null} />
+						<path stroke-linecap='round'
+							  stroke-linejoin='round' d='M5 13l4 4L19 7'
+							  class:stroke-black={color === null}
+						/>
 					</svg>
 				{/if}
 			</div>
@@ -225,114 +209,60 @@
 <div class='mt-[5vh] w-2/3 m-auto'>
 	<div class='grid grid-cols-3 place-items-center w-1/2 m-auto'>
 		<div
-			class='
-				shadow-lg shadow-gray-100
-				border-2 rounded-full
-				p-3 w-14 h-14
-				group
-				transition transition-transform transition-colors
-
-				hover:-translate-y-1.5
-				hover:transition-colors hover:transition-transform
-				hover:cursor-pointer
-			'
+			class='shadow-lg shadow-gray-100 border-2 rounded-full p-3 w-14 h-14 group transition transition-transform transition-colors hover:-translate-y-1.5 hover:transition-colors hover:transition-transform hover:cursor-pointer'
 			on:click={save}
 		>
-			<svg
-				xmlns='http://www.w3.org/2000/svg'
-				class='
-					w-6 h-6 m-0.5
-					stroke-gray-400
-					transition transition-colors
-					group-hover:stroke-gray-500
-					hover:transition hover:transition-colors
-				'
-				fill='none'
-				viewBox='0 0 24 24'
-				stroke='currentColor'
-				stroke-width='2'
+			<svg xmlns='http://www.w3.org/2000/svg'
+				 class='w-6 h-6 m-0.5 stroke-gray-400 transition transition-colors group-hover:stroke-gray-500 hover:transition hover:transition-colors'
+				 fill='none'
+				 viewBox='0 0 24 24'
+				 stroke='currentColor'
+				 stroke-width='2'
 			>
-				<path
-					stroke-linecap='round'
-					stroke-linejoin='round'
-					d='M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2'
+				<path stroke-linecap='round'
+					  stroke-linejoin='round'
+					  d='M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2'
 				/>
 			</svg>
 		</div>
 		<div
-			class='
-				shadow-lg shadow-gray-100
-				border-2 rounded-full
-				p-3 w-14 h-14
-				group
-				transition transition-transform transition-colors
-
-				hover:-translate-y-1.5
-				hover:transition-colors hover:transition-transform
-				hover:cursor-pointer
-			'
+			class='shadow-lg shadow-gray-100 border-2 rounded-full p-3 w-14 h-14 group transition transition-transform transition-colors hover:-translate-y-1.5 hover:transition-colors hover:transition-transform hover:cursor-pointer'
 			on:click={reset}
 		>
-			<svg
-				xmlns='http://www.w3.org/2000/svg'
-				class='
-					w-6 h-6 m-0.5
-					stroke-gray-400
-					transition transition-colors
-					group-hover:stroke-gray-500
-					hover:transition hover:transition-colors
-				'
-				fill='none'
-				viewBox='0 0 24 24'
-				stroke='currentColor'
-				stroke-width='2'
+			<svg xmlns='http://www.w3.org/2000/svg'
+				 class='w-6 h-6 m-0.5 stroke-gray-400 transition transition-colors group-hover:stroke-gray-500 hover:transition hover:transition-colors'
+				 fill='none'
+				 viewBox='0 0 24 24'
+				 stroke='currentColor'
+				 stroke-width='2'
 			>
-				<path
-					stroke-linecap='round'
-					stroke-linejoin='round'
-					d='M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z'
+				<path stroke-linecap='round'
+					  stroke-linejoin='round'
+					  d='M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z'
 				/>
 			</svg>
 		</div>
 		<div
-			class='
-				shadow-lg shadow-gray-100
-				border-2 rounded-full
-				p-3 w-14 h-14
-				group
-				transition transition-transform transition-colors
-
-				hover:-translate-y-1.5
-				hover:transition-colors hover:transition-transform
-				hover:cursor-pointer
-			'
+			class='shadow-lg shadow-gray-100 border-2 rounded-full p-3 w-14 h-14 group transition transition-transform transition-colors hover:-translate-y-1.5 hover:transition-colors hover:transition-transform hover:cursor-pointer'
 			on:click={clear}
 		>
-			<svg
-				xmlns='http://www.w3.org/2000/svg'
-				class='
-				w-6 h-6 m-0.5
-				stroke-red-400
-				transition transition-colors
-				group-hover:stroke-red-500
-				hover:transition hover:transition-colors
-			'
-				fill='none'
-				viewBox='0 0 24 24'
-				stroke='currentColor'
-				stroke-width='2'
+			<svg xmlns='http://www.w3.org/2000/svg'
+				 class='w-6 h-6 m-0.5 stroke-red-400 transition transition-colors group-hover:stroke-red-500 hover:transition hover:transition-colors'
+				 fill='none'
+				 viewBox='0 0 24 24'
+				 stroke='currentColor'
+				 stroke-width='2'
 			>
-				<path
-					stroke-linecap='round'
-					stroke-linejoin='round'
-					d='M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z'
+				<path stroke-linecap='round'
+					  stroke-linejoin='round'
+					  d='M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z'
 				/>
-				<path
-					stroke-linecap='round'
-					stroke-linejoin='round'
-					d='M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z'
+				<path stroke-linecap='round'
+					  stroke-linejoin='round'
+					  d='M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z'
 				/>
 			</svg>
 		</div>
 	</div>
 </div>
+`
