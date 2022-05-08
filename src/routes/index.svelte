@@ -1,16 +1,22 @@
 <script lang='ts'>
 	import GridPicker from '../components/GridPicker.svelte'
 	import GridDraw from '../components/GridDraw.svelte'
+	import ModePicker from "../components/ModePicker.svelte";
+	import GridDrawHearts from "../components/GridDrawHearts.svelte";
 	import { fly, slide } from 'svelte/transition'
 
-	let w, h
+	let w, h, brushMode
 
 	function setGrid(x: number, y: number) {
 		[w, h] = [x, y]
 	}
 
-	function resetGrid() {
-		[w, h] = [null, null]
+	function setMode(mode: string) {
+		brushMode = mode
+	}
+
+	function reset() {
+		[w, h, brushMode] = [null, null, null]
 	}
 </script>
 
@@ -21,11 +27,21 @@
 				width={8} height={6} on:pick={e => setGrid(e.detail.width, e.detail.height)}
 			/>
 		</div>
+	{:else if !brushMode}
+		<div in:fly={{delay: 300, duration: 300}} out:slide={{duration: 300}}>
+			<ModePicker on:pick={e => setMode(e.detail.mode)} />
+		</div>
 	{:else}
 		<div in:fly={{delay: 300, duration: 300}} out:slide={{duration: 300}}>
-			<GridDraw
-				width={w} height={h} on:reset={resetGrid}
-			/>
+			{#if brushMode === 'blocks'}
+				<GridDraw
+					width={w} height={h} on:reset={reset}
+				/>
+			{:else if brushMode === 'hearts'}
+				<GridDrawHearts
+					width={w} height={h} on:reset={reset}
+				/>
+			{/if}
 		</div>
 	{/if}
 </div>

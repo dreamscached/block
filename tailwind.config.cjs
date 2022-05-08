@@ -11,7 +11,18 @@ module.exports = {
 				'block-orange': '#ff9800',
 				'block-yellow': '#ffcc32',
 				'block-black': '#424242',
-				'block-white': '#e0e0e0'
+				'block-white': '#e0e0e0',
+
+				'heart-green': '#44ce28',
+				'heart-brown': '#7e471f',
+				'heart-blue': '#2983f8',
+				'heart-red': '#ec392c',
+				'heart-purple': '#bc4df6',
+				'heart-orange': '#ff960d',
+				'heart-yellow': '#fcda4b',
+				'heart-black': '#181818',
+				'heart-white': '#dbdbdb',
+				'heart-pink': '#ed34a8'
 			}
 		}
 	},
