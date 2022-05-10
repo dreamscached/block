@@ -56,7 +56,7 @@
 
 <div class='text-center text-gray-400 select-none fixed w-full bottom-20'>
 	<span class='text-xl'>
-		<a class='text-blue-400' href='https://github.com/dreamscached/block' target='_blank'>block</a>
+		<a class='text-green-400' href='https://github.com/dreamscached/block' target='_blank'>block</a>
 		is made by
 		<a class='text-blue-400' href='https://github.com/dreamscached' target='_blank'>@dreamscached</a>
 		using
