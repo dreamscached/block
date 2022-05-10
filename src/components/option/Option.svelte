@@ -3,30 +3,45 @@
 	import { Size, Type } from './options'
 
 
+	// Component imports
+	import { fly, slide } from 'svelte/transition'
+
+
 	// Properties
 	export let type: Type, size: Size
+	export let title: string
 </script>
 
-<div
-	class='shadow-lg shadow-gray-100 border-2 rounded-full flex flex-wrap place-content-center p-3 w-14 h-14 group
-	transition transition-all hover:-translate-y-1.5 hover:transition hover:transition-all hover:cursor-pointer'
-	class:w-14={size === Size.NORMAL} class:h-14={size === Size.NORMAL}
-	class:w-20={size === Size.BIG} class:h-20={size === Size.BIG}
-	on:click
->
-	<svg xmlns='http://www.w3.org/2000/svg'
-		 class='transition transition-colors group-hover:stroke-gray-500 block hover:transition hover:transition-colors'
-		 fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'
-
-		 class:w-6={size === Size.NORMAL} class:h-6={size === Size.NORMAL}
-		 class:w-10={size === Size.BIG} class:h-10={size === Size.BIG}
-
-		 class:stroke-gray-400={type === Type.NORMAL}
-		 class:group-hover:stroke-gray-500={type === Type.NORMAL}
-
-		 class:stroke-red-400={type === Type.DANGER}
-		 class:group-hover:stroke-red-500={type === Type.DANGER}
+<div class='flex flex-col flex-wrap place-content-center place-items-center group'>
+	<div
+		class='shadow-lg shadow-gray-100 bg-white border-2 rounded-full flex flex-wrap place-content-center p-3 w-14 h-14 z-10
+		transition transition-all hover:-translate-y-1.5 hover:transition hover:transition-all hover:cursor-pointer'
+		class:w-14={size === Size.NORMAL} class:h-14={size === Size.NORMAL}
+		class:w-20={size === Size.BIG} class:h-20={size === Size.BIG}
+		on:click
 	>
-		<slot />
-	</svg>
+		<svg xmlns='http://www.w3.org/2000/svg'
+			 class='transition transition-colors group-hover:stroke-gray-500 block hover:transition hover:transition-colors'
+			 fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'
+
+			 class:w-6={size === Size.NORMAL} class:h-6={size === Size.NORMAL}
+			 class:w-10={size === Size.BIG} class:h-10={size === Size.BIG}
+
+			 class:stroke-gray-400={type === Type.NORMAL}
+			 class:group-hover:stroke-gray-500={type === Type.NORMAL}
+
+			 class:stroke-red-400={type === Type.DANGER}
+			 class:group-hover:stroke-red-500={type === Type.DANGER}
+		>
+			<slot />
+		</svg>
+	</div>
+	<p class='text-lg lowercase font-medium text-center select-none opacity-0 scale-x-50 scale-y-50 z-0 -mt-10 transition
+		transition-all group-hover:transition group-hover:transition-all group-hover:scale-x-100 group-hover:scale-y-100
+		group-hover:translate-y-9 group-hover:opacity-100'
+	   class:text-gray-400={type === Type.NORMAL} class:group-hover:text-gray-500={type === Type.NORMAL}
+	   class:text-red-400={type === Type.DANGER} class:group-hover:text-red-500={type === Type.DANGER}
+	>
+		{title}
+	</p>
 </div>

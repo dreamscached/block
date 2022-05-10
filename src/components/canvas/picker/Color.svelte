@@ -3,13 +3,17 @@
 	import type { Color } from '../../../color'
 
 
+	// Component imports
+	import { slide } from 'svelte/transition'
+
+
 	// Properties
 	export let color: Color | null
 	export let selected: boolean
 </script>
 
 <div
-	class='border-2 rounded-md transition text-white w-8 h-8 hover:cursor-pointer hover:-translate-y-1.5 hover:transition'
+	class='border-2 rounded-md transition text-white w-8 h-8 flex flex-wrap place-content-center hover:cursor-pointer hover:-translate-y-1.5 hover:transition'
 
 	class:bg-heart-pink={color?.name === 'pink'} class:border-heart-pink={color?.name === 'pink'}
 	class:bg-block-green={color?.name === 'green'} class:border-block-green={color?.name === 'green'}
@@ -37,9 +41,10 @@
 		<svg xmlns='http://www.w3.org/2000/svg'
 			 stroke='currentColor'
 			 stroke-width='2'
-			 class='w-5 h-5 m-1'
+			 class='w-5 h-5'
 			 fill='none'
 			 viewBox='0 0 24 24'
+			 transition:slide={{duration: 300}}
 		>
 			<path stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7'
 				  class:stroke-black={color === null} />

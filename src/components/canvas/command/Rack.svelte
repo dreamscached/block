@@ -26,7 +26,7 @@
 </script>
 
 <div class='mt-10 w-1/3 m-auto'>
-	<div class='grid grid-cols-3 place-items-center w-1/2 m-auto'>
+	<div class='grid grid-cols-3 w-2/3 m-auto justify-center'>
 		<Copy on:click={onCopy} />
 		<Back on:click={onBack} />
 		<Reset on:click={onReset} />

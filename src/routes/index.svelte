@@ -52,11 +52,11 @@
 
 <div class='text-center text-gray-400 select-none fixed w-full bottom-20'>
 	<span class='text-xl'>
-		<a class='text-blue-400 underline underline-offset-8' href='https://github.com/dreamscached/block'>block</a>
+		<a class='text-blue-400' href='https://github.com/dreamscached/block'>block</a>
 		is made by
-		<a class='text-blue-400 underline underline-offset-8' href='https://github.com/dreamscached'>@dreamscached</a>
+		<a class='text-blue-400' href='https://github.com/dreamscached'>@dreamscached</a>
 		using
-		<a class='text-orange-400 underline underline-offset-8' href='https://svelte.dev/'>svelte</a>
+		<a class='text-orange-400' href='https://svelte.dev/'>svelte</a>
 		and lots of
 		<svg xmlns='http://www.w3.org/2000/svg' class='fill-red-400 h-5 w-5 mb-1 inline' viewBox='0 0 20 20' fill='currentColor'>
 		  <path fill-rule='evenodd' clip-rule='evenodd'
