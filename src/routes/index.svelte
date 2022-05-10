@@ -30,6 +30,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>BLOCK 💚</title>
+</svelte:head>
+
 <div class='mt-64 mb-10'>
 	{#if !$canvasSize}
 		<div out:slide={{duration: 300}} in:fly={{delay: 300, duration: 300}}>
@@ -58,7 +62,8 @@
 		using
 		<a class='text-orange-400' href='https://svelte.dev/' target='_blank'>svelte</a>
 		and lots of
-		<svg xmlns='http://www.w3.org/2000/svg' class='fill-red-400 h-5 w-5 mb-1 inline' viewBox='0 0 20 20' fill='currentColor'>
+		<svg xmlns='http://www.w3.org/2000/svg' class='fill-red-400 h-5 w-5 mb-1 inline' viewBox='0 0 20 20'
+			 fill='currentColor'>
 		  <path fill-rule='evenodd' clip-rule='evenodd'
 				d='M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z'
 		  />
