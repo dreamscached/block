@@ -30,7 +30,7 @@
 	}
 </script>
 
-<div class='mt-56 mb-10'>
+<div class='mt-64 mb-10'>
 	{#if !$canvasSize}
 		<div out:slide={{duration: 300}} in:fly={{delay: 300, duration: 300}}>
 			<GridSizePick width={8} height={6} on:pick={setGridSize} />
@@ -48,4 +48,20 @@
 			<Canvas width={$canvasSize.w} height={$canvasSize.h} colors={$brush} />
 		</div>
 	{/if}
+</div>
+
+<div class='text-center text-gray-400 select-none fixed w-full bottom-20'>
+	<span class='text-xl'>
+		<a class='text-blue-400 underline underline-offset-8' href='https://github.com/dreamscached/block'>block</a>
+		is made by
+		<a class='text-blue-400 underline underline-offset-8' href='https://github.com/dreamscached'>@dreamscached</a>
+		using
+		<a class='text-orange-400 underline underline-offset-8' href='https://svelte.dev/'>svelte</a>
+		and lots of
+		<svg xmlns='http://www.w3.org/2000/svg' class='fill-red-400 h-5 w-5 mb-1 inline' viewBox='0 0 20 20' fill='currentColor'>
+		  <path fill-rule='evenodd' clip-rule='evenodd'
+				d='M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z'
+		  />
+		</svg>
+	</span>
 </div>
