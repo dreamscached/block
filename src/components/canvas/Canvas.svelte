@@ -5,6 +5,7 @@
 	import type { Color } from '../../color'
 	import { size as canvasSize } from '../../stores/canvas'
 	import { brush } from '../../stores/brush'
+	import { bubbleWrap} from '../../stores/bubblewrap'
 
 
 	// Component imports
@@ -29,11 +30,11 @@
 	}
 
 	function onCopy() {
-		navigator.clipboard.writeText(render(grid))
+		navigator.clipboard.writeText(render(grid, { fillEmpty: undefined, unicode: true, bubbleWrap: $bubbleWrap }))
 	}
 
 	function onBack() {
-		[$canvasSize, $brush] = [null, null]
+		[$canvasSize, $brush, $bubbleWrap] = [null, null, null]
 	}
 
 	function onReset() {
