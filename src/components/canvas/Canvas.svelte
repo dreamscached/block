@@ -5,7 +5,7 @@
 	import type { Color } from '../../color'
 	import { size as canvasSize } from '../../stores/canvas'
 	import { brush } from '../../stores/brush'
-	import { bubbleWrap} from '../../stores/bubblewrap'
+	import { bubbleWrap } from '../../stores/bubblewrap'
 
 
 	// Component imports

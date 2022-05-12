@@ -34,7 +34,7 @@
 	class:bg-heart-black={color?.name === 'black'} class:border-heart-black={color?.name === 'black'}
 	class:bg-block-white={color?.name === 'white'} class:border-block-white={color?.name === 'white'}
 	class:bg-heart-white={color?.name === 'white'} class:border-heart-white={color?.name === 'white'}
-	
+
 	on:click
 >
 	{#if selected}

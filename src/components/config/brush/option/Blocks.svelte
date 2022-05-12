@@ -1,6 +1,6 @@
 <script lang='ts'>
 	// Script imports
-	import { Type, Size } from '../../../option/options'
+	import { Size, Type } from '../../../option/options'
 
 
 	// Component imports

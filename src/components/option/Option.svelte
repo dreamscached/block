@@ -3,10 +3,6 @@
 	import { Size, Type } from './options'
 
 
-	// Component imports
-	import { fly, slide } from 'svelte/transition'
-
-
 	// Properties
 	export let type: Type, size: Size
 	export let title: string

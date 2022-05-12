@@ -15,7 +15,7 @@
 	class:border-heart-pink={cell?.name === 'pink'}
 	class:hover:bg-heart-pink={color?.name === 'pink'}
 	class:hover:border-heart-pink={color?.name === 'pink'}
-	
+
 	class:bg-block-green={cell?.name === 'green'}
 	class:border-block-green={cell?.name === 'green'}
 	class:hover:bg-block-green={color?.name === 'green'}
