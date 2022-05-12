@@ -25,7 +25,7 @@
 	}
 </script>
 
-<div class='mt-10 w-1/3 m-auto'>
+<div class='mt-10 md:w-1/3 m-auto'>
 	<div class='grid grid-cols-3 w-2/3 m-auto justify-center'>
 		<Copy on:click={onCopy} />
 		<Back on:click={onBack} />

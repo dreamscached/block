@@ -9,7 +9,7 @@
 </script>
 
 <div
-	class='border-2 border:gray-200 rounded-md hover:cursor-pointer transition transition-colors p-4 w-1'
+	class='border-2 border:gray-200 rounded-md hover:cursor-pointer transition transition-colors p-3 md:p-4 w-1'
 
 	class:bg-heart-pink={cell?.name === 'pink'}
 	class:border-heart-pink={cell?.name === 'pink'}

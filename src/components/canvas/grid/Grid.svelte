@@ -24,7 +24,7 @@
 	}
 </script>
 
-<div class='mt-[5vh] w-1/4 m-auto'>
+<div class='mt-[5vh] md:w-2/3 lg:w-1/4 m-auto'>
 	<div class='grid gap-3 place-content-center place-items-center max-w-fit max-h-fit m-auto'
 
 		 class:grid-cols-1={width === 1}

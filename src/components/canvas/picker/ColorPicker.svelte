@@ -23,8 +23,8 @@
 	}
 </script>
 
-<div class='w-1/4 m-auto mt-10'>
-	<div class='grid gap-x-3 place-content-center place-items-center'
+<div class='w-3/4 md:w-1/2 lg:w-1/3 m-auto mt-10'>
+	<div class='grid gap-x-3 place-content-center place-items-center min-w-fit'
 		 class:grid-cols-10={colors.length === 9}
 		 class:grid-cols-11={colors.length === 10}
 	>

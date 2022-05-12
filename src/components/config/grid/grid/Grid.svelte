@@ -35,7 +35,7 @@
 	}
 </script>
 
-<div class='mt-[5vh] w-1/4 m-auto'>
+<div class='mt-[5vh] md:w-2/3 lg:w-1/4 m-auto'>
 	<div class='grid grid-cols-8 grid-rows-6 gap-3 place-content-center place-items-center max-w-fit max-h-fit m-auto'
 		 on:mouseout={onMouseOut} on:blur={onMouseOut}
 	>
