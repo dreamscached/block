@@ -30,7 +30,7 @@
 	}
 
 	function onCopy() {
-		navigator.clipboard.writeText(render(grid, { fillEmpty: undefined, unicode: true, bubbleWrap: $bubbleWrap }))
+		navigator.clipboard.writeText(render(grid, { fillEmpty: ' ', unicode: true, bubbleWrap: $bubbleWrap }))
 	}
 
 	function onBack() {
