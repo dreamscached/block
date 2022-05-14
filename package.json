@@ -5,11 +5,19 @@
     "type": "module",
     "private": true,
     "license": "GPL-3.0-or-later",
-    "homepage": "https://github.com/dreamscached/block",
     "author": {
         "email": "dreamscache.d@gmail.com",
         "name": "dreamscached",
         "url": "https://github.com/dreamscached"
+    },
+    "homepage": "https://github.com/dreamscached/block",
+    "bugs": {
+        "email": "dreamscache.d@gmail.com",
+        "url": "https://github.com/dreamscached/block/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dreamscached/block.git"
     },
     "devDependencies": {
         "@sveltejs/adapter-auto": "next",
