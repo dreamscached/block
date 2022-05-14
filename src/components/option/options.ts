@@ -1,7 +1,9 @@
 export enum Type {
-	NORMAL, DANGER
+	NORMAL,
+	DANGER
 }
 
 export enum Size {
-	NORMAL, BIG
+	NORMAL,
+	BIG
 }

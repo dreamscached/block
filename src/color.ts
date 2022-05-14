@@ -1,5 +1,4 @@
-export type Color = { emoji: string, name: string, code: string, r: number, g: number, b: number, hex: string }
-
+export type Color = { emoji: string; name: string; code: string; r: number; g: number; b: number; hex: string }
 
 // Block emojis with colors, 9 elements (so far)
 export const blocks: Color[] = [
@@ -13,7 +12,6 @@ export const blocks: Color[] = [
 	{ emoji: '⬛', name: 'black', code: 'black_large_square', r: 0x42, g: 0x42, b: 0x42, hex: '#424242' },
 	{ emoji: '⬜', name: 'white', code: 'white_large_square', r: 0xe0, g: 0xe0, b: 0xe0, hex: '#e0e0e0' }
 ]
-
 
 // Heart emojis with colors, 10 elements (so far)
 export const hearts: Color[] = [
