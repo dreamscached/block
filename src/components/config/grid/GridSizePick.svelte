@@ -1,5 +1,6 @@
 <script lang='ts'>
 	// Component imports
+	import Page from '../../Page.svelte'
 	import Grid from './grid/Grid.svelte'
 
 
@@ -7,5 +8,7 @@
 	export let width: number, height: number
 </script>
 
-<h1 class='text-3xl text-gray-600 text-center uppercase select-none'>pick grid size</h1>
-<Grid {width} {height} on:pick />
+<Page>
+	<span slot='title'>pick grid size</span>
+	<Grid {width} {height} on:pick />
+</Page>

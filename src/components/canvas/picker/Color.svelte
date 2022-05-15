@@ -13,7 +13,7 @@
 </script>
 
 <div
-	class='border-2 rounded-md transition text-white w-6 md:w-8 h-6 md:h-8 flex flex-wrap place-content-center hover:cursor-pointer hover:-translate-y-1.5 hover:transition'
+	class='border-2 rounded-md transition text-white w-8 h-8 flex flex-wrap place-content-center hover:cursor-pointer hover:-translate-y-1.5 hover:transition'
 
 	class:bg-heart-pink={color?.name === 'pink'} class:border-heart-pink={color?.name === 'pink'}
 	class:bg-block-green={color?.name === 'green'} class:border-block-green={color?.name === 'green'}
