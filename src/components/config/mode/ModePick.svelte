@@ -13,7 +13,6 @@
 
 	function setType(bubbleWrap: boolean) {
 		return function() {
-			console.log(bubbleWrap)
 			dispatch('pick', { bubbleWrap })
 		}
 	}
