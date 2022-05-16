@@ -3,6 +3,7 @@
 	// Script imports
 	import { createGrid, render } from './grid'
 	import type { Color } from '../../color'
+	import { History } from './history'
 	import { size as canvasSize } from '../../stores/canvas'
 	import { brush } from '../../stores/brush'
 	import { bubbleWrap } from '../../stores/bubblewrap'
@@ -22,6 +23,7 @@
 
 	// Private variables
 	let grid = createGrid(width, height)
+	let history = new History(100)
 	let color: Color | null = colors[0]
 
 
@@ -39,9 +41,31 @@
 	}
 
 	function onReset() {
-		grid = createGrid(width, height)
+		const [prev, curr] = [grid, createGrid(width, height)]
+		history.do(() => {
+			grid = curr
+		}, () => {
+			grid = prev
+		})
+	}
+
+	function onKeyDown(e: KeyboardEvent) {
+		if (e.ctrlKey && !e.shiftKey) {
+			switch (e.code) {
+				case 'KeyZ':
+					history.undo()
+					e.preventDefault()
+					break
+				case 'KeyY':
+					history.redo()
+					e.preventDefault()
+					break
+			}
+		}
 	}
 </script>
+
+<svelte:window on:keydown={onKeyDown} />
 
 <Page>
 	<span slot='title'>now draw!</span>
@@ -55,7 +79,7 @@
 				</th>
 				<th>
 					<div class='p-4'>
-						<Grid {grid} {color} />
+						<Grid {grid} {color} {history} />
 					</div>
 				</th>
 			</tr>
@@ -67,7 +91,7 @@
 			</tr>
 		</table>
 		<div class='flex flex-col gap-5 justify-center block md:hidden'>
-			<Grid {grid} {color} />
+			<Grid {grid} {color} {history} />
 			<div class='flex flex-row justify-center'>
 				<ColorPicker {colors} {color} on:pick={onColorPick} />
 			</div>

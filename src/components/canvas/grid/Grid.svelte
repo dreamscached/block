@@ -2,6 +2,7 @@
 	// Script imports
 	import type { Grid } from '../grid'
 	import type { Color } from '../../../color'
+	import { History } from '../history'
 
 
 	// Component imports
@@ -15,11 +16,19 @@
 
 	export let color: Color | null
 
+	export let history: History
+
 
 	// Event handlers
 	function onClick(x: number, y: number) {
 		return function() {
-			grid[y][x] = color
+			const [prev, curr] = [grid[y][x], color]
+			history.do(() => {
+				grid[y][x] = curr
+			}, () => {
+				grid[y][x] = prev
+			})
+			console.log(history)
 		}
 	}
 </script>
