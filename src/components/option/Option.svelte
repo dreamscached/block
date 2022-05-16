@@ -10,11 +10,14 @@
 
 <div class='flex flex-col flex-wrap place-content-center place-items-center'>
 	<div
-		class='shadow-lg shadow-gray-100 bg-white border-2 rounded-full flex flex-wrap place-content-center p-3 w-14 h-14
+		class='shadow-lg bg-white border-2 rounded-full flex flex-wrap place-content-center p-3 w-14 h-14
 		z-10 transition transition-all peer hover:-translate-y-1.5 hover:transition hover:transition-all
 		hover:cursor-pointer'
 		class:w-14={size === Size.NORMAL} class:h-14={size === Size.NORMAL}
 		class:w-20={size === Size.BIG} class:h-20={size === Size.BIG}
+		class:shadow-gray-100={type === Type.NORMAL}
+		class:shadow-red-100={type === Type.DANGER}
+		class:border-red-200={type === Type.DANGER}
 		on:click
 	>
 		<svg xmlns='http://www.w3.org/2000/svg'
