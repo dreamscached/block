@@ -1,3 +1,4 @@
+<!--suppress JSUnusedAssignment -->
 <script lang='ts'>
 	// Script imports
 	import type { Color } from '../../../color'

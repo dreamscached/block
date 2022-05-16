@@ -1,3 +1,4 @@
+<!--suppress JSUnusedAssignment -->
 <script lang='ts'>
 	// Script imports
 	import type { Grid } from '../grid'
