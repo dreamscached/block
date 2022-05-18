@@ -29,12 +29,11 @@
 			}, () => {
 				grid[y][x] = prev
 			})
-			console.log(history)
 		}
 	}
 </script>
 
-<div class='grid gap-3 place-content-center place-items-center max-w-fit max-h-fit m-auto'
+<div class='grid gap-3 place-content-center place-items-center min-w-fit'
 
 	 class:grid-cols-1={width === 1}
 	 class:grid-cols-2={width === 2}

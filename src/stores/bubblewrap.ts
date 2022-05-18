@@ -1,3 +1,4 @@
-import { type Writable, writable } from 'svelte/store'
+import type { Writable } from 'svelte/store'
+import { writable } from 'svelte/store'
 
-export const bubbleWrap: Writable<boolean> = writable()
+export const bubbleWrap: Writable<boolean | null> = writable()

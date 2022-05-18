@@ -1,12 +1,11 @@
 <!--suppress JSUnusedAssignment -->
 <script lang='ts'>
 	// Script imports
-	import { createGrid, render } from './grid'
+	import { createGrid, type Dimensions, render } from './grid'
 	import type { Color } from '../../color'
 	import { History } from './history'
-	import { size as canvasSize } from '../../stores/canvas'
-	import { brush } from '../../stores/brush'
-	import { bubbleWrap } from '../../stores/bubblewrap'
+	import { goto } from '$app/navigation'
+	import { baseUrl } from '../../url'
 
 
 	// Component imports
@@ -17,14 +16,15 @@
 
 
 	// Properties
-	export let width: number, height: number
+	export let size: Dimensions
 	export let colors: Color[]
+	export let bubbleWrap: boolean
 
 
 	// Private variables
-	let grid = createGrid(width, height)
+	let grid = createGrid($size.w, $size.h)
 	let history = new History(100)
-	let color: Color | null = colors[0]
+	let color: Color | null = $colors[0]
 
 
 	// Event handling
@@ -37,11 +37,11 @@
 	}
 
 	function onBack() {
-		[$canvasSize, $brush, $bubbleWrap] = [null, null, null]
+		goto(`${baseUrl}/`, { replaceState: true })
 	}
 
 	function onReset() {
-		const [prev, curr] = [grid, createGrid(width, height)]
+		const [prev, curr] = [grid, createGrid($size.w, $size.h)]
 		history.do(() => {
 			grid = curr
 		}, () => {
@@ -74,11 +74,11 @@
 			<tr>
 				<th>
 					<div class='p-4'>
-						<ColorPicker {colors} {color} on:pick={onColorPick} />
+						<ColorPicker colors={$colors} {color} on:pick={onColorPick} />
 					</div>
 				</th>
 				<th>
-					<div class='p-4'>
+					<div class='p-4 min-w-fit'>
 						<Grid {grid} {color} {history} />
 					</div>
 				</th>
@@ -93,7 +93,7 @@
 		<div class='flex flex-col gap-5 justify-center block md:hidden'>
 			<Grid {grid} {color} {history} />
 			<div class='flex flex-row justify-center'>
-				<ColorPicker {colors} {color} on:pick={onColorPick} />
+				<ColorPicker colors={$colors} {color} on:pick={onColorPick} />
 			</div>
 			<Rack on:copy={onCopy} on:back={onBack} on:reset={onReset} />
 		</div>

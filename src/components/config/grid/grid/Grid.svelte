@@ -35,7 +35,7 @@
 	}
 </script>
 
-<div class='grid grid-cols-8 grid-rows-6 gap-3 place-content-center place-items-center w-fit h-fit'
+<div class='grid grid-cols-8 grid-rows-6 gap-3 place-content-center place-items-center min-w-fit max-w-fit min-h-fit max-h-fit'
 	 on:mouseout={onMouseOut} on:blur={onMouseOut}
 >
 	{#each { length: height } as _, cellY}
