@@ -33,7 +33,7 @@
 	}
 </script>
 
-<div class='grid gap-3 place-content-center place-items-center min-w-fit'
+<div class='grid gap-3 place-content-center place-items-center min-w-fit min-h-fit max-w-fit max-h-fit m-auto'
 
 	 class:grid-cols-1={width === 1}
 	 class:grid-cols-2={width === 2}
