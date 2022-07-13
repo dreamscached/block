@@ -10,14 +10,14 @@
 
 
 	// Properties
-	export let colors: (Color | null)[]
-	export let color: Color | null = colors[0]
+	export let colors: Color[]
+	export let color: Color = colors.find(color => color.name === 'white')
 
 
 	// Event handling
 	const dispatch = createEventDispatcher()
 
-	function onClick(color: Color | null) {
+	function onClick(color: Color) {
 		return function() {
 			dispatch('pick', { color })
 		}
@@ -31,5 +31,4 @@
 	{#each colors as paletteColor}
 		<ColorComponent color={paletteColor} selected={color === paletteColor} on:click={onClick(paletteColor)} />
 	{/each}
-	<ColorComponent color={null} selected={color === null} on:click={onClick(null)} />
 </div>

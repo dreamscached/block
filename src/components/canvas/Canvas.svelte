@@ -18,11 +18,12 @@
 	// Properties
 	export let size: Dimensions
 	export let colors: Color[]
+	export let fill: Color
 	export let bubbleWrap: boolean
 
 
 	// Private variables
-	let grid = createGrid($size.w, $size.h)
+	let grid = createGrid($size.w, $size.h, $fill)
 	let history = new History(100)
 	let color: Color | null = $colors[0]
 
@@ -33,7 +34,11 @@
 	}
 
 	function onCopy() {
-		navigator.clipboard.writeText(render(grid, { fillEmpty: ' ', unicode: true, bubbleWrap: $bubbleWrap }))
+		navigator.clipboard.writeText(render(grid, {
+			fillEmpty: $fill,
+			unicode: true,
+			bubbleWrap: $bubbleWrap
+		}))
 	}
 
 	function onBack() {
@@ -41,7 +46,7 @@
 	}
 
 	function onReset() {
-		const [prev, curr] = [grid, createGrid($size.w, $size.h)]
+		const [prev, curr] = [grid, createGrid($size.w, $size.h, $fill)]
 		history.do(() => {
 			grid = curr
 		}, () => {
