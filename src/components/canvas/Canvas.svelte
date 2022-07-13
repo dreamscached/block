@@ -6,6 +6,7 @@
 	import { History } from './history'
 	import { goto } from '$app/navigation'
 	import { baseUrl } from '../../url'
+	import choice from 'random-item'
 
 
 	// Component imports
@@ -56,6 +57,21 @@
 		goto(`${baseUrl}/`, { replaceState: true })
 	}
 
+	function onRandom() {
+		const [prev, curr] = [grid, createGrid($size.w, $size.h, $fill)]
+		history.do(() => {
+			for (let y = 0; y < $size.h; y++) {
+				for (let x = 0; x < $size.w; x++) {
+					curr[y][x] = choice($colors)
+				}
+			}
+
+			grid = curr
+		}, () => {
+			grid = prev
+		})
+	}
+
 	function onReset() {
 		const [prev, curr] = [grid, createGrid($size.w, $size.h, $fill)]
 		history.do(() => {
@@ -102,7 +118,7 @@
 			<tr>
 				<th></th>
 				<th>
-					<Rack on:copy={onCopy} on:back={onBack} on:reset={onReset} />
+					<Rack on:copy={onCopy} on:back={onBack} on:random={onRandom} on:reset={onReset} />
 				</th>
 			</tr>
 		</table>
