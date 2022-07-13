@@ -18,8 +18,8 @@
 	const dispatch = createEventDispatcher()
 
 	function onClick(color: Color) {
-		return function() {
-			dispatch('pick', { color })
+		return function(e: MouseEvent) {
+			dispatch('pick', { color, fill: e.shiftKey })
 		}
 	}
 </script>

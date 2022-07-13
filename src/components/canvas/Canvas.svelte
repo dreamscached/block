@@ -26,11 +26,22 @@
 	let grid = createGrid($size.w, $size.h, $fill)
 	let history = new History(100)
 	let color: Color | null = $colors[0]
+	let initialFill = $fill
 
 
 	// Event handling
 	function onColorPick(e: CustomEvent) {
-		color = e.detail.color
+		if (e.detail.fill) {
+			const [prev, curr] = [grid, createGrid($size.w, $size.h, e.detail.color)]
+
+			history.do(() => {
+				grid = curr
+			}, () => {
+				[grid, $fill] = [prev, initialFill]
+			})
+		} else {
+			color = e.detail.color
+		}
 	}
 
 	function onCopy() {
