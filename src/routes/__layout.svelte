@@ -19,9 +19,12 @@
 
 <svelte:head>
 	<title>BLOCK 💚</title>
+	<meta property='og:title' content='BLOCK 💚' />
+	<meta property='og:description' content='💚 Emoji grid generator with minimalistic UI' />
+	<meta property='og:type' content='website' />
 </svelte:head>
 
-<div class='flex flex-col place-content-around w-screen h-screen'>
+<div class='flex flex-col place-content-around w-screen h-screen p-4'>
 	<slot />
 	<Footer />
 </div>

@@ -7,6 +7,7 @@
 
 	// Script imports
 	import { createEventDispatcher } from 'svelte'
+	import Random from './Random.svelte'
 
 
 	// Event handling
@@ -20,6 +21,10 @@
 		dispatch('back')
 	}
 
+	function onRandom() {
+		dispatch('random')
+	}
+
 	function onReset() {
 		dispatch('reset')
 	}
@@ -28,5 +33,6 @@
 <div class='flex flex-row gap-x-4 justify-center'>
 	<Copy on:click={onCopy} />
 	<Back on:click={onBack} />
+	<Random on:click={onRandom} />
 	<Reset on:click={onReset} />
 </div>

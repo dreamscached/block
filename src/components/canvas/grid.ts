@@ -2,19 +2,19 @@ import type { Color } from '../../color'
 
 export type Dimensions = { w: number; h: number }
 
-export type Grid = (Color | null)[][]
+export type Grid = Color[][]
 
-export function createGrid(width: number, height: number): Grid {
+export function createGrid(width: number, height: number, fill: Color): Grid {
 	if (width < 1 || height < 1) throw 'width or height cannot be less than one'
 	return Array(height)
 		.fill(null)
-		.map(() => Array(width).fill(null))
+		.map(() => Array(width).fill(fill))
 }
 
 export type RenderOptions = {
 	bubbleWrap: boolean
 	unicode: boolean
-	fillEmpty: Color | string
+	fillEmpty: Color | undefined
 }
 
 export function render(
@@ -22,7 +22,7 @@ export function render(
 	options: RenderOptions = {
 		bubbleWrap: false,
 		unicode: true,
-		fillEmpty: '　'
+		fillEmpty: undefined
 	}
 ): string {
 	const lines: string[] = []
@@ -32,8 +32,7 @@ export function render(
 
 		for (const cell of row) {
 			const value =
-				(cell ?? {})[options.unicode ? 'emoji' : 'code'] ??
-				(typeof options.fillEmpty === 'string' ? options.fillEmpty : options.fillEmpty.code)
+				(cell ?? {})[options.unicode ? 'emoji' : 'code'] ?? (options?.fillEmpty?.code)
 			line.push(options.bubbleWrap ? `||${value}||` : value)
 		}
 

@@ -4,8 +4,8 @@
 
 	// Script imports
 	import { size } from '../stores/canvas'
-	import { brush } from '../stores/brush'
+	import { brush as color, fill } from '../stores/brush'
 	import { bubbleWrap } from '../stores/bubblewrap'
 </script>
 
-<Canvas size={size} colors={brush} bubbleWrap={bubbleWrap} />
+<Canvas size={size} colors={color} fill={fill} bubbleWrap={bubbleWrap} />

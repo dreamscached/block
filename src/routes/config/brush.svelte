@@ -4,7 +4,7 @@
 
 
 	// Script imports
-	import { brush as brush } from '../../stores/brush'
+	import { brush, fill } from '../../stores/brush'
 	import { baseUrl } from '../../url'
 	import { goto } from '$app/navigation'
 
@@ -12,7 +12,7 @@
 	// Event handling
 	function setBrushType(e: CustomEvent) {
 		// noinspection JSUndeclaredVariable
-		$brush = e.detail.type
+		[$brush, $fill] = [e.detail.type, e.detail.fill]
 		goto(`${baseUrl}/config/mode`, { replaceState: true })
 	}
 </script>

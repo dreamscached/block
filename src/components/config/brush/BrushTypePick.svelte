@@ -14,9 +14,9 @@
 	// Event handling
 	const dispatch = createEventDispatcher()
 
-	function setType(type: Color[]) {
+	function setType(type: Color[], fill: Color) {
 		return function() {
-			dispatch('pick', { type })
+			dispatch('pick', { type, fill })
 		}
 	}
 </script>
@@ -24,7 +24,7 @@
 <Page>
 	<span slot='title'>pick brush type</span>
 	<div class='flex flex-row gap-8 place-content-center'>
-		<Blocks on:click={setType(blocks)} />
-		<Hearts on:click={setType(hearts)} />
+		<Blocks on:click={setType(blocks, blocks[8]/*=white*/)} />
+		<Hearts on:click={setType(hearts, hearts[2]/*=white*/)} />
 	</div>
 </Page>

@@ -6,6 +6,7 @@
 	import { History } from './history'
 	import { goto } from '$app/navigation'
 	import { baseUrl } from '../../url'
+	import choice from 'random-item'
 
 
 	// Component imports
@@ -18,30 +19,61 @@
 	// Properties
 	export let size: Dimensions
 	export let colors: Color[]
+	export let fill: Color
 	export let bubbleWrap: boolean
 
 
 	// Private variables
-	let grid = createGrid($size.w, $size.h)
+	let grid = createGrid($size.w, $size.h, $fill)
 	let history = new History(100)
 	let color: Color | null = $colors[0]
+	let initialFill = $fill
 
 
 	// Event handling
 	function onColorPick(e: CustomEvent) {
-		color = e.detail.color
+		if (e.detail.fill) {
+			const [prev, curr] = [grid, createGrid($size.w, $size.h, e.detail.color)]
+
+			history.do(() => {
+				grid = curr
+			}, () => {
+				[grid, $fill] = [prev, initialFill]
+			})
+		} else {
+			color = e.detail.color
+		}
 	}
 
 	function onCopy() {
-		navigator.clipboard.writeText(render(grid, { fillEmpty: ' ', unicode: true, bubbleWrap: $bubbleWrap }))
+		navigator.clipboard.writeText(render(grid, {
+			fillEmpty: $fill,
+			unicode: true,
+			bubbleWrap: $bubbleWrap
+		}))
 	}
 
 	function onBack() {
 		goto(`${baseUrl}/`, { replaceState: true })
 	}
 
+	function onRandom() {
+		const [prev, curr] = [grid, createGrid($size.w, $size.h, $fill)]
+		history.do(() => {
+			for (let y = 0; y < $size.h; y++) {
+				for (let x = 0; x < $size.w; x++) {
+					curr[y][x] = choice($colors)
+				}
+			}
+
+			grid = curr
+		}, () => {
+			grid = prev
+		})
+	}
+
 	function onReset() {
-		const [prev, curr] = [grid, createGrid($size.w, $size.h)]
+		const [prev, curr] = [grid, createGrid($size.w, $size.h, $fill)]
 		history.do(() => {
 			grid = curr
 		}, () => {
@@ -86,7 +118,7 @@
 			<tr>
 				<th></th>
 				<th>
-					<Rack on:copy={onCopy} on:back={onBack} on:reset={onReset} />
+					<Rack on:copy={onCopy} on:back={onBack} on:random={onRandom} on:reset={onReset} />
 				</th>
 			</tr>
 		</table>
