@@ -5,7 +5,17 @@ import preprocess from 'svelte-preprocess'
 const config = {
 	preprocess: preprocess(),
 	kit: {
-		adapter: adapter()
+		adapter: adapter({
+			pages: 'docs',
+			assets: 'docs',
+			fallback: 'index.html'
+		}),
+		prerender: {
+			default: true
+		},
+		paths: {
+			base: process.env.NODE_ENV === 'development' ? '' : '/block'
+		}
 	}
 }
 
