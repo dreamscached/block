@@ -1,0 +1,157 @@
+{
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "start-17972d7a.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_index-6bc387e6.js",
+      "_index-aadc6c64.js",
+      "_singletons-d1fb5791.js"
+    ],
+    "dynamicImports": [
+      "src/routes/__layout.svelte",
+      ".svelte-kit/runtime/components/error.svelte",
+      "src/routes/canvas.svelte",
+      "src/routes/config/brush.svelte",
+      "src/routes/config/mode.svelte",
+      "src/routes/index.svelte"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "pages/__layout.svelte-438f25b8.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-6bc387e6.js",
+      "_index-30d8503f.js",
+      "_index-aadc6c64.js",
+      "_canvas-b2933c95.js",
+      "_bubblewrap-85a7a8b8.js"
+    ],
+    "css": [
+      "assets/pages/__layout.svelte-316b0e62.css"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "error.svelte-1f657666.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-6bc387e6.js"
+    ]
+  },
+  "src/routes/canvas.svelte": {
+    "file": "pages/canvas.svelte-3f0ff1c9.js",
+    "src": "src/routes/canvas.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-6bc387e6.js",
+      "_canvas-b2933c95.js",
+      "_color-756d6e39.js",
+      "_bubblewrap-85a7a8b8.js",
+      "_Page-19ea3cea.js",
+      "_index-30d8503f.js",
+      "_Option-3ad50661.js",
+      "_index-aadc6c64.js",
+      "_singletons-d1fb5791.js"
+    ]
+  },
+  "src/routes/config/brush.svelte": {
+    "file": "pages/config/brush.svelte-6f2ca06b.js",
+    "src": "src/routes/config/brush.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-6bc387e6.js",
+      "_color-756d6e39.js",
+      "_index-30d8503f.js",
+      "_Page-19ea3cea.js",
+      "_Option-3ad50661.js",
+      "_index-aadc6c64.js",
+      "_singletons-d1fb5791.js"
+    ]
+  },
+  "src/routes/config/mode.svelte": {
+    "file": "pages/config/mode.svelte-6e465010.js",
+    "src": "src/routes/config/mode.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-6bc387e6.js",
+      "_bubblewrap-85a7a8b8.js",
+      "_index-30d8503f.js",
+      "_Page-19ea3cea.js",
+      "_Option-3ad50661.js",
+      "_index-aadc6c64.js",
+      "_singletons-d1fb5791.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "pages/index.svelte-bc133680.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-6bc387e6.js",
+      "_canvas-b2933c95.js",
+      "_index-30d8503f.js",
+      "_Page-19ea3cea.js",
+      "_bubblewrap-85a7a8b8.js",
+      "_index-aadc6c64.js",
+      "_singletons-d1fb5791.js"
+    ]
+  },
+  "_index-6bc387e6.js": {
+    "file": "chunks/index-6bc387e6.js"
+  },
+  "_index-aadc6c64.js": {
+    "file": "chunks/index-aadc6c64.js",
+    "imports": [
+      "_index-6bc387e6.js"
+    ]
+  },
+  "_singletons-d1fb5791.js": {
+    "file": "chunks/singletons-d1fb5791.js"
+  },
+  "_index-30d8503f.js": {
+    "file": "chunks/index-30d8503f.js",
+    "imports": [
+      "_index-6bc387e6.js"
+    ]
+  },
+  "_canvas-b2933c95.js": {
+    "file": "chunks/canvas-b2933c95.js",
+    "imports": [
+      "_index-aadc6c64.js"
+    ]
+  },
+  "_bubblewrap-85a7a8b8.js": {
+    "file": "chunks/bubblewrap-85a7a8b8.js",
+    "imports": [
+      "_index-aadc6c64.js"
+    ]
+  },
+  "_color-756d6e39.js": {
+    "file": "chunks/color-756d6e39.js",
+    "imports": [
+      "_index-aadc6c64.js"
+    ]
+  },
+  "_Page-19ea3cea.js": {
+    "file": "chunks/Page-19ea3cea.js",
+    "imports": [
+      "_singletons-d1fb5791.js",
+      "_index-6bc387e6.js",
+      "_index-30d8503f.js"
+    ]
+  },
+  "_Option-3ad50661.js": {
+    "file": "chunks/Option-3ad50661.js",
+    "imports": [
+      "_index-6bc387e6.js"
+    ]
+  }
+}
