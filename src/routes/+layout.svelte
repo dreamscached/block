@@ -9,6 +9,8 @@
 	export async function load({ url }) {
 		return url.pathname !== `${baseUrl}/` && !browser ? { redirect: `${baseUrl}/`, status: 302 } : {}
 	}
+
+	export const ssr = true;
 </script>
 
 <script lang='ts'>

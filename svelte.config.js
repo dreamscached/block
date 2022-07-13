@@ -10,9 +10,6 @@ const config = {
 			assets: 'docs',
 			fallback: 'index.html'
 		}),
-		prerender: {
-			default: true
-		},
 		paths: {
 			base: process.env.NODE_ENV === 'development' ? '' : '/block'
 		}
