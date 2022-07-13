@@ -21,7 +21,7 @@
 	<title>BLOCK 💚</title>
 </svelte:head>
 
-<div class='flex flex-col place-content-around w-screen h-screen'>
+<div class='flex flex-col place-content-around w-screen h-screen p-4'>
 	<slot />
 	<Footer />
 </div>
