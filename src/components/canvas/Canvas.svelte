@@ -100,7 +100,7 @@
 <svelte:window on:keydown={onKeyDown} />
 
 <Page>
-	<span slot='title'>now draw!</span>
+	<span slot='title' class='dark:text-white transition'>now draw!</span>
 	<div class='flex flex-row flex-wrap gap-8 justify-center justify-items-center'>
 		<table class='table hidden md:block'>
 			<tr>
