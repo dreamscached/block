@@ -47,7 +47,7 @@
 			 transition:slide={{duration: 300}}
 		>
 			<path stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7'
-				  class:stroke-black={color === null} />
+				  class:stroke-black={color.name === 'white'} />
 		</svg>
 	{/if}
 </div>
