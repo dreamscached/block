@@ -39,8 +39,8 @@
 		</svg>
 	</div>
 	<p class='text-lg lowercase font-medium text-center select-none opacity-0 scale-x-50 scale-y-50 z-0 -mt-10 transition
-		transition-all peer-hover:transition peer-hover:transition-all peer-hover:scale-x-100 peer-hover:scale-y-100
-		peer-hover:translate-y-9 peer-hover:opacity-100'
+		transition-all peer-hover:transition peer-hover:transition-all md:peer-hover:scale-x-100 md:peer-hover:scale-y-100
+		md:peer-hover:translate-y-9 md:peer-hover:opacity-100'
 	   class:text-gray-400={type === Type.NORMAL} class:group-hover:text-gray-500={type === Type.NORMAL}
 	   class:dark:text-white={type === Type.NORMAL} class:group-hover:text-white={type === Type.NORMAL}
 	   class:text-red-400={type === Type.DANGER} class:group-hover:text-red-500={type === Type.DANGER}

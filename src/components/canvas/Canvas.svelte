@@ -127,7 +127,7 @@
 			<div class='flex flex-row justify-center'>
 				<ColorPicker colors={$colors} {color} on:pick={onColorPick} />
 			</div>
-			<Rack on:copy={onCopy} on:back={onBack} on:reset={onReset} />
+			<Rack on:copy={onCopy} on:back={onBack} on:random={onRandom} on:reset={onReset} />
 		</div>
 	</div>
 </Page>

@@ -8,7 +8,7 @@
 <div class='flex flex-col flex-wrap place-content-center'>
 	<div class='text-gray-400 dark:text-white transition text-center select-none'>
 		{#if $size && $bubbleWrap !== null}
-			<p class='mb-4' in:fly={{ duration: 300 }}
+			<p class='mb-4 hidden md:block' in:fly={{ duration: 300 }}
 			   out:fly={{ duration: 300 }}>
 				Use
 				<kbd class='bg-gray-200 rounded-md text-gray-600 font-medium p-1'>Ctrl+Z</kbd>
