@@ -21,6 +21,7 @@
 	// First config step, so reset variables
 	$canvasSize = null
 	$bubbleWrap = null
+
 </script>
 
 <GridSizePick width={8} height={6} on:pick={setGridSize} />
