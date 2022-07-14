@@ -9,6 +9,6 @@
 </script>
 
 <Page>
-	<span slot='title' class='dark:text-white'>pick grid size</span>
+	<span slot='title' class='dark:text-white transition'>pick grid size</span>
 	<Grid {width} {height} on:pick />
 </Page>

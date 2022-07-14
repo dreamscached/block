@@ -20,7 +20,7 @@
 </script>
 
 <Page>
-	<span slot='title' class='dark:text-white'>pick mode</span>
+	<span slot='title' class='dark:text-white transition'>pick mode</span>
 	<div class='flex flex-row gap-8 place-content-center'>
 		<Normal on:click={setType(false)} />
 		<Spoiler on:click={setType(true)} />
