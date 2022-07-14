@@ -3,6 +3,10 @@
 	import { browser } from '$app/env'
 	import { baseUrl } from '../url'
 
+
+	// Redirect to index page when non-index is requested.
+	// (E.g. so that one can't just load /canvas; the application just isn't configured
+	// until config routes are visited.)
 	export async function load({ url }) {
 		return url.pathname !== `${baseUrl}/` && !browser ? { redirect: `${baseUrl}/`, status: 302 } : {}
 	}
@@ -31,10 +35,12 @@
 			}
 		})
 
-		$mode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? Mode.DARK : Mode.LIGHT
-		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-			$mode = e.matches ? Mode.DARK : Mode.LIGHT
-		})
+		if ($mode === null) {
+			$mode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? Mode.DARK : Mode.LIGHT
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+				$mode = e.matches ? Mode.DARK : Mode.LIGHT
+			})
+		}
 	}
 </script>
 
