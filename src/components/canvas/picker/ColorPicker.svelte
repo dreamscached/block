@@ -26,7 +26,6 @@
 
 <div class='grid grid-cols-5 grid-rows-2 md:grid-cols-2 gap-2 place-content-center place-items-center w-fit min-h-fit'
 	 class:md:grid-rows-4={colors.length === 9}
-	 class:md:grid-rows-5={colors.length === 10}
 >
 	{#each colors as paletteColor}
 		<ColorComponent color={paletteColor} selected={color === paletteColor} on:click={onClick(paletteColor)} />
