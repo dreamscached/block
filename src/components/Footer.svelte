@@ -10,13 +10,16 @@
 		{#if $size && $bubbleWrap !== null}
 			<p class='mb-4 hidden md:block' in:fly={{ duration: 300 }}
 			   out:fly={{ duration: 300 }}>
-				Use
-				<kbd class='bg-gray-200 rounded-md text-gray-600 font-medium p-1'>Ctrl+Z</kbd>
-				and
-				<kbd class='bg-gray-200 rounded-md text-gray-600 font-medium p-1'>Ctrl+Y</kbd>
-				to undo and redo,
-				<kbd class='bg-gray-200 rounded-md text-gray-600 font-medium p-1'>Shift+Click</kbd> on color to fill
-				canvas.
+				<span>
+					<kbd class='bg-gray-200 rounded-md text-gray-600 font-medium p-1'>Ctrl+Z</kbd>
+					and
+					<kbd class='bg-gray-200 rounded-md text-gray-600 font-medium p-1'>Ctrl+Y</kbd>
+					to undo and redo
+				</span>
+				<span class='pl-5'>
+					<kbd class='bg-gray-200 rounded-md text-gray-600 font-medium p-1'>Shift+Click</kbd>
+					on color to fill
+				</span>
 			</p>
 		{/if}
 		<p class='text-md md:text-xl font-normal'>
