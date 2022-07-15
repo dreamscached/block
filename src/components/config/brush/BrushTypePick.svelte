@@ -25,6 +25,6 @@
 	<span slot='title' class='dark:text-white transition'>pick brush type</span>
 	<div class='flex flex-row gap-8 place-content-center'>
 		<Blocks on:click={setType(blocks, blocks[8]/*=white*/)} />
-		<Hearts on:click={setType(hearts, hearts[2]/*=white*/)} />
+		<Hearts on:click={setType(hearts, hearts[8]/*=white*/)} />
 	</div>
 </Page>
