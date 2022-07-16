@@ -2,7 +2,6 @@
 	// Script imports
 	import { Size, Type } from './options'
 
-
 	// Properties
 	export let type: Type, size: Size
 	export let title: string

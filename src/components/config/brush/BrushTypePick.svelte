@@ -4,12 +4,10 @@
 	import Hearts from './option/Hearts.svelte'
 	import Page from '../../Page.svelte'
 
-
 	// Script imports
 	import { createEventDispatcher } from 'svelte'
-	import type { Color } from '$lib//color'
-	import { blocks, hearts } from '$lib//color'
-
+	import type { Color } from '$lib/color'
+	import { blocks, hearts } from '$lib/color'
 
 	// Event handling
 	const dispatch = createEventDispatcher()

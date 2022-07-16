@@ -2,12 +2,10 @@
 	// Component imports
 	import BrushTypePick from '../../components/config/brush/BrushTypePick.svelte'
 
-
 	// Script imports
 	import { brush, fill } from '../../stores/brush'
 	import { baseUrl } from '$lib/url'
 	import { goto } from '$app/navigation'
-
 
 	// Event handling
 	function setBrushType(e: CustomEvent) {

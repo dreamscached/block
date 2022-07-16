@@ -1,7 +1,6 @@
 <script lang='ts'>
 	// Script imports
-	import type { Color } from '$lib//color'
-
+	import type { Color } from '$lib/color'
 
 	// Properties
 	export let cell: Color | null

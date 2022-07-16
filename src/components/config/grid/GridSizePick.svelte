@@ -3,7 +3,6 @@
 	import Page from '../../Page.svelte'
 	import Grid from './grid/Grid.svelte'
 
-
 	// Properties
 	export let width: number, height: number
 </script>

@@ -1,18 +1,15 @@
 <!--suppress JSUnusedAssignment -->
 <script lang='ts'>
 	// Script imports
-	import type { Color } from '$lib//color'
+	import type { Color } from '$lib/color'
 	import { createEventDispatcher } from 'svelte'
-
 
 	// Component imports
 	import ColorComponent from './Color.svelte'
 
-
 	// Properties
 	export let colors: Color[]
 	export let color: Color = colors.find(color => color.name === 'white')
-
 
 	// Event handling
 	const dispatch = createEventDispatcher()
