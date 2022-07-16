@@ -1,11 +1,11 @@
 <script lang='ts'>
+	// Script imports
+	import { createEventDispatcher } from 'svelte'
+
 	// Component imports
 	import Page from '../../Page.svelte'
 	import Normal from './option/Normal.svelte'
 	import Spoiler from './option/Spoiler.svelte'
-
-	// Script imports
-	import { createEventDispatcher } from 'svelte'
 
 	// Event handling
 	const dispatch = createEventDispatcher()
