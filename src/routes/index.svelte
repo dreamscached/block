@@ -5,7 +5,7 @@
 
 	// Script imports
 	import { size as canvasSize } from '../stores/canvas'
-	import { baseUrl } from '../url'
+	import { baseUrl } from '$lib/url'
 	import { goto } from '$app/navigation'
 	import { bubbleWrap } from '../stores/bubblewrap'
 

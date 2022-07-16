@@ -7,8 +7,8 @@
 
 	// Script imports
 	import { createEventDispatcher } from 'svelte'
-	import type { Color } from '../../../color'
-	import { blocks, hearts } from '../../../color'
+	import type { Color } from '$lib//color'
+	import { blocks, hearts } from '$lib//color'
 
 
 	// Event handling

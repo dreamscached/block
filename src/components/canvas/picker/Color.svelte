@@ -1,6 +1,6 @@
 <script lang='ts'>
 	// Script imports
-	import type { Color } from '../../../color'
+	import type { Color } from '$lib//color'
 
 
 	// Component imports

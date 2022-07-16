@@ -1,4 +1,4 @@
-import type { Color } from '../../color'
+import type { Color } from '$lib/color'
 
 export type Dimensions = { w: number; h: number }
 

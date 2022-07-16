@@ -2,7 +2,7 @@
 <script lang='ts'>
 	// Script imports
 	import type { Grid } from '../grid'
-	import type { Color } from '../../../color'
+	import type { Color } from '$lib//color'
 	import { History } from '../history'
 
 
