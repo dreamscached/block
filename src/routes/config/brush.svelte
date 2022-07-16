@@ -5,7 +5,7 @@
 
 	// Script imports
 	import { brush, fill } from '../../stores/brush'
-	import { baseUrl } from '../../url'
+	import { baseUrl } from '$lib/url'
 	import { goto } from '$app/navigation'
 
 

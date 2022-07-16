@@ -2,10 +2,10 @@
 <script lang='ts'>
 	// Script imports
 	import { createGrid, type Dimensions, render } from './grid'
-	import type { Color } from '../../color'
+	import type { Color } from '$lib/color'
 	import { History } from './history'
 	import { goto } from '$app/navigation'
-	import { baseUrl } from '../../url'
+	import { baseUrl } from '$lib/url'
 	import choice from 'random-item'
 
 

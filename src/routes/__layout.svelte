@@ -1,7 +1,7 @@
 <script lang='ts' context='module'>
 	// Script imports
 	import { browser } from '$app/env'
-	import { baseUrl } from '../url'
+	import { baseUrl } from '$lib/url'
 
 
 	// Redirect to index page when non-index is requested.
@@ -22,7 +22,7 @@
 
 	// Script imports
 	import { mode } from '../stores/dark'
-	import { Mode } from '../mode'
+	import { Mode } from '$lib/mode'
 
 
 	// Check now and listen for dark mode changes

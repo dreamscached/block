@@ -1,5 +1,5 @@
 import { type Writable, writable } from 'svelte/store'
-import { Mode } from '../mode'
+import { Mode } from '$lib/mode'
 import { browser } from '$app/env'
 
 const localStorageKey = 'darkMode'

@@ -1,7 +1,7 @@
 <!--suppress JSUnusedAssignment -->
 <script lang='ts'>
 	// Script imports
-	import type { Color } from '../../../color'
+	import type { Color } from '$lib//color'
 	import { createEventDispatcher } from 'svelte'
 
 
