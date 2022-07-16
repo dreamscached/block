@@ -2,7 +2,6 @@
 	// Script imports
 	import { Size, Type } from '../../../option/options'
 
-
 	// Component imports
 	import Option from '../../../option/Option.svelte'
 </script>

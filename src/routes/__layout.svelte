@@ -3,7 +3,6 @@
 	import { browser } from '$app/env'
 	import { baseUrl } from '$lib/url'
 
-
 	// Redirect to index page when non-index is requested.
 	// (E.g. so that one can't just load /canvas; the application just isn't configured
 	// until config routes are visited.)
@@ -16,14 +15,12 @@
 	// TailwindCSS import
 	import '../app.css'
 
-
 	// Component imports
 	import Footer from '../components/Footer.svelte'
 
 	// Script imports
 	import { mode } from '../stores/dark'
 	import { Mode } from '$lib/mode'
-
 
 	// Check now and listen for dark mode changes
 	if (browser) {

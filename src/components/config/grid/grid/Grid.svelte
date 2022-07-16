@@ -2,18 +2,14 @@
 	// Script imports
 	import { createEventDispatcher } from 'svelte'
 
-
 	// Component imports
 	import Block from './Block.svelte'
-
 
 	// Properties
 	export let width: number, height: number = null
 
-
 	// Private variables
 	let x: number | null = null, y: number | null = null
-
 
 	// Event handling
 	const dispatch = createEventDispatcher()

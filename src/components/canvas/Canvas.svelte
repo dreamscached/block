@@ -8,13 +8,11 @@
 	import { baseUrl } from '$lib/url'
 	import choice from 'random-item'
 
-
 	// Component imports
 	import Page from '../Page.svelte'
 	import Grid from './grid/Grid.svelte'
 	import ColorPicker from './picker/ColorPicker.svelte'
 	import Rack from './command/Rack.svelte'
-
 
 	// Properties
 	export let size: Dimensions
@@ -22,13 +20,11 @@
 	export let fill: Color
 	export let bubbleWrap: boolean
 
-
 	// Private variables
 	let grid = createGrid($size.w, $size.h, $fill)
 	let history = new History(100)
 	let color: Color | null = $colors[0]
 	let initialFill = $fill
-
 
 	// Event handling
 	function onColorPick(e: CustomEvent) {

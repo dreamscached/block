@@ -1,11 +1,9 @@
 <script lang='ts'>
 	// Script imports
-	import type { Color } from '$lib//color'
-
+	import type { Color } from '$lib/color'
 
 	// Component imports
 	import { slide } from 'svelte/transition'
-
 
 	// Properties
 	export let color: Color | null

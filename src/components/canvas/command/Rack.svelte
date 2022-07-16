@@ -1,14 +1,12 @@
 <script lang='ts'>
-	// Component imports
-	import Copy from './Copy.svelte'
-	import Back from './Back.svelte'
-	import Reset from './Reset.svelte'
-
-
 	// Script imports
 	import { createEventDispatcher } from 'svelte'
 	import Random from './Random.svelte'
 
+	// Component imports
+	import Copy from './Copy.svelte'
+	import Back from './Back.svelte'
+	import Reset from './Reset.svelte'
 
 	// Event handling
 	const dispatch = createEventDispatcher()

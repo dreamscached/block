@@ -2,13 +2,11 @@
 <script lang='ts'>
 	// Script imports
 	import type { Grid } from '../grid'
-	import type { Color } from '$lib//color'
+	import type { Color } from '$lib/color'
 	import { History } from '../history'
-
 
 	// Component imports
 	import Block from './Block.svelte'
-
 
 	// Properties
 	export let grid: Grid
@@ -16,9 +14,7 @@
 	$: height = grid.length
 
 	export let color: Color | null
-
 	export let history: History
-
 
 	// Event handlers
 	function onClick(x: number, y: number) {
