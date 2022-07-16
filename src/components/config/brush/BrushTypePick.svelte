@@ -1,13 +1,13 @@
 <script lang='ts'>
-	// Component imports
-	import Blocks from './option/Blocks.svelte'
-	import Hearts from './option/Hearts.svelte'
-	import Page from '../../Page.svelte'
-
 	// Script imports
 	import { createEventDispatcher } from 'svelte'
 	import type { Color } from '$lib/color'
 	import { blocks, hearts } from '$lib/color'
+
+	// Component imports
+	import Blocks from './option/Blocks.svelte'
+	import Hearts from './option/Hearts.svelte'
+	import Page from '../../Page.svelte'
 
 	// Event handling
 	const dispatch = createEventDispatcher()

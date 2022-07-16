@@ -1,12 +1,12 @@
 <script lang='ts'>
-	// Component imports
-	import GridSizePick from '../components/config/grid/GridSizePick.svelte'
-
 	// Script imports
 	import { size as canvasSize } from '../stores/canvas'
 	import { baseUrl } from '$lib/url'
 	import { goto } from '$app/navigation'
 	import { bubbleWrap } from '../stores/bubblewrap'
+
+	// Component imports
+	import GridSizePick from '../components/config/grid/GridSizePick.svelte'
 
 	// Event handling
 	function setGridSize(e: CustomEvent) {
