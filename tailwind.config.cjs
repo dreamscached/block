@@ -21,8 +21,7 @@ module.exports = {
 				'heart-orange': '#ff960d',
 				'heart-yellow': '#fcda4b',
 				'heart-black': '#181818',
-				'heart-white': '#dbdbdb',
-				'heart-pink': '#ed34a8'
+				'heart-white': '#dbdbdb'
 			}
 		}
 	},
