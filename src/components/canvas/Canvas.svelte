@@ -107,7 +107,7 @@
 				</th>
 				<th>
 					<div class='p-4 min-w-fit'>
-						<Grid {grid} {color} {history} />
+						<Grid colors={$colors} {grid} {color} {history} />
 					</div>
 				</th>
 			</tr>
@@ -119,7 +119,7 @@
 			</tr>
 		</table>
 		<div class='flex flex-col gap-5 justify-center block md:hidden'>
-			<Grid {grid} {color} {history} />
+			<Grid colors={$colors} {grid} {color} {history} />
 			<div class='flex flex-row justify-center'>
 				<ColorPicker colors={$colors} {color} on:pick={onColorPick} />
 			</div>

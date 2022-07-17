@@ -26,5 +26,14 @@ module.exports = {
 		}
 	},
 	darkMode: 'class',
-	plugins: []
+	plugins: [],
+	safelist: [
+		{ pattern: /grid-cols-[1-9]/ },
+		{ pattern: /grid-rows-[1-6]/ },
+		{ pattern: /grid-rows-4/, variants: ['md'] },
+		{
+			pattern: /(bg|border)-(block|heart)-(green|brown|blue|red|purple|orange|yellow|black|white)/,
+			variants: ['hover']
+		}
+	]
 }
