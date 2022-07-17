@@ -21,10 +21,8 @@
 	}
 </script>
 
-<div class='grid grid-cols-5 grid-rows-2 md:grid-cols-2 gap-2 place-content-center place-items-center w-fit min-h-fit'
-	 class:md:grid-rows-4={colors.length === 9}
->
+<div class='grid grid-cols-5 grid-rows-2 md:grid-cols-2 md:grid-rows-4 gap-2 place-content-center place-items-center w-fit min-h-fit'>
 	{#each colors as paletteColor}
-		<ColorComponent color={paletteColor} selected={color === paletteColor} on:click={onClick(paletteColor)} />
+		<ColorComponent {colors} color={paletteColor} selected={color === paletteColor} on:click={onClick(paletteColor)} />
 	{/each}
 </div>
