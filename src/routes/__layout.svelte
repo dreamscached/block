@@ -55,7 +55,7 @@
 	</div>
 </div>
 
-<div class='flex flex-col place-content-around w-screen h-screen dark:bg-gray-700 transition p-4'>
+<div class='flex flex-col place-content-around w-screen h-screen dark:bg-gray-800 transition p-4'>
 	<slot />
 	<Footer />
 </div>

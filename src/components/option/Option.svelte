@@ -9,7 +9,7 @@
 
 <div class='flex flex-col flex-wrap place-content-center place-items-center'>
 	<div
-		class='shadow-lg dark:shadow-gray-700 bg-white border-2 dark:border-0 rounded-full flex flex-wrap place-content-center p-3 w-14 h-14
+		class='shadow-lg dark:shadow-gray-800 bg-white border-2 dark:border-0 rounded-full flex flex-wrap place-content-center p-3 w-14 h-14
 		z-10 transition transition-all peer hover:-translate-y-1.5 hover:transition hover:transition-all
 		hover:cursor-pointer'
 		class:w-14={size === Size.NORMAL} class:h-14={size === Size.NORMAL}
