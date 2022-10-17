@@ -46,7 +46,7 @@
     },
     "scripts": {
         "dev": "vite dev",
-        "build": "rm -rf docs && svelte-kit build && mv build docs && touch docs/.nojekyll",
+        "build": "rm -rf docs && svelte-kit build && touch docs/.nojekyll",
         "package": "svelte-kit package",
         "preview": "svelte-kit preview",
         "check": "svelte-check --tsconfig ./tsconfig.json",
