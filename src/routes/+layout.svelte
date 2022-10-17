@@ -1,6 +1,6 @@
 <script lang='ts' context='module'>
 	// Script imports
-	import { browser } from '$app/env'
+	import { browser } from '$app/environment'
 	import { baseUrl } from '$lib/url'
 
 	// Redirect to index page when non-index is requested.
